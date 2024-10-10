@@ -18,12 +18,12 @@ public class Empleado {
 		//Determinar primas 
 		if(ventasMes>=1500) {
 			primas = 200;
-		}else if(ventasMes>=100) {
+		}else if(ventasMes>=1000) {
 			primas = 100;
 		}
 		
 		//Determinar horas extras
-		extras = horasExtra * 30;
+		extras = horasExtra * 30;//comprobar tal vez horas extras negativas
 		
 		return salarioBase + primas + extras;
 			

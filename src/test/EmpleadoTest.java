@@ -106,8 +106,27 @@ class EmpleadoTest {
 	}
 
 	@Test
-	void testCalculoNominaNeta() {
+	void testCalculoNominaNetaMayor2500() {
+		float expected = 2132;
+		float actual = e.calculoNominaNeta(2600);
 		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	void testCalculoNominaNetaMayor2100() {
+		float expected = 1870;
+		float actual = e.calculoNominaNeta(2200);
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	void testCalculoNominaNetaMenor() {
+		float expected = 1000;
+		float actual = e.calculoNominaNeta(1000);
+		
+		assertEquals(expected, actual);
 	}
 
 }
